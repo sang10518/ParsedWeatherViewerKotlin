@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:background="@drawable/table_border"
+    android:layout_height="wrap_content">
+
+        <TextView android:id="@+id/tvRegionTitle"
+            android:layout_weight="0.1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="지역"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+        <TextView android:id="@+id/tvAmWeatherTitle"
+            android:layout_weight="0.45"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="오늘오전"
+            android:textAppearance="?attr/textAppearanceListItem" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent">
+        </View>
+        <TextView android:id="@+id/tvPmWeatherTitle"
+            android:layout_weight="0.45"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:text="오늘오후"
+            android:textAppearance="?attr/textAppearanceListItem" />
+</LinearLayout>

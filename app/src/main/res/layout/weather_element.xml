@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/ivWeather"
+            android:layout_height="40dp"
+            android:layout_width="40dp">
+        </ImageView>
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="6dp"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView android:id="@+id/tvSummary"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:textSize="16sp"
+                android:text="구름조금"
+                android:layout_width="wrap_content">
+            </TextView>
+            <LinearLayout
+                android:id="@+id/llTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView android:id="@+id/tvTempTitle"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="기온"
+                    android:layout_width="wrap_content">
+                </TextView>
+                <TextView android:id="@+id/tvTemp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="wrap_content"
+                    android:text="18℃"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#ff0000"
+                    android:layout_width="wrap_content">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llRain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView android:id="@+id/tvRainTitle"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="강수확률"
+                    android:layout_width="wrap_content">
+                </TextView>
+                <TextView android:id="@+id/tvRain"
+                    android:layout_marginLeft="4dp"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:text="10%"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</merge>
