@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="지역"
+            android:text="@string/region_title"
             android:textAppearance="?attr/textAppearanceListItem" />
 
         <TextView android:id="@+id/tvAmWeatherTitle"
@@ -24,7 +24,7 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:textStyle="bold"
-            android:text="오늘오전"
+            android:text="@string/today_am"
             android:textAppearance="?attr/textAppearanceListItem" />
         <View
             android:layout_width="1dp"
@@ -37,6 +37,6 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:textStyle="bold"
-            android:text="오늘오후"
+            android:text="@string/today_pm"
             android:textAppearance="?attr/textAppearanceListItem" />
 </LinearLayout>
