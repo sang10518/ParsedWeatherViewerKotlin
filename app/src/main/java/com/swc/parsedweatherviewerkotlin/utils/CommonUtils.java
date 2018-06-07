@@ -1,3 +1,5 @@
+package com.swc.parsedweatherviewerkotlin.utils;
+
 import com.swc.parsedweatherviewerkotlin.model.WeatherElement;
 import com.swc.parsedweatherviewerkotlin.model.WeatherRow;
 

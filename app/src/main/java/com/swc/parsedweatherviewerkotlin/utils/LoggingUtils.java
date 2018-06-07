@@ -1,3 +1,5 @@
+package com.swc.parsedweatherviewerkotlin.utils;
+
 import android.util.Log;
 
 import com.swc.parsedweatherviewerkotlin.BuildConfig;
