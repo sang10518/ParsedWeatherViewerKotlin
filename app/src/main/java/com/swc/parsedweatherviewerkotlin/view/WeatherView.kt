@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import com.squareup.picasso.Picasso
 import com.swc.parsedweatherviewerkotlin.R
 import com.swc.parsedweatherviewerkotlin.model.WeatherElement
+import com.swc.parsedweatherviewerkotlin.utils.LoggingUtils
 import kotlinx.android.synthetic.main.weather_element.view.*
 
 class WeatherView : LinearLayout {

@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.swc.parsedweatherviewerkotlin.R
 import com.swc.parsedweatherviewerkotlin.model.WeatherRow
+import com.swc.parsedweatherviewerkotlin.utils.LoggingUtils
+import kotlinx.android.synthetic.main.row_weather.view.*
+import kotlinx.android.synthetic.main.row_weather_header.view.*
 
 class WeatherRowAdapter(private val mWeatherRows: List<WeatherRow>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
