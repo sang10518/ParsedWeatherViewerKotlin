@@ -49,8 +49,8 @@ class WeatherView : LinearLayout {
 
         Picasso.get()
                 .load(weatherElem.iconUrl)
-                .resize(150, 150)
-                .centerCrop()
+                .resize(200, 200)
+                .centerInside()
                 .into(ivWeather)
     }
 
