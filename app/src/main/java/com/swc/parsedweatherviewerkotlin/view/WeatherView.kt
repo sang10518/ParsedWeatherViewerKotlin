@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import com.squareup.picasso.Picasso
 import com.swc.parsedweatherviewerkotlin.R
 import com.swc.parsedweatherviewerkotlin.model.WeatherElement
+import com.swc.parsedweatherviewerkotlin.utils.LoggingUtils
 import kotlinx.android.synthetic.main.weather_element.view.*
 
 class WeatherView : LinearLayout {
@@ -48,8 +49,8 @@ class WeatherView : LinearLayout {
 
         Picasso.get()
                 .load(weatherElem.iconUrl)
-                .resize(150, 150)
-                .centerCrop()
+                .resize(200, 200)
+                .centerInside()
                 .into(ivWeather)
     }
 

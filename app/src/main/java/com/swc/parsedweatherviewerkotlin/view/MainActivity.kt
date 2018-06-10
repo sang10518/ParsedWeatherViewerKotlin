@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.swc.parsedweatherviewerkotlin.R
 import com.swc.parsedweatherviewerkotlin.model.WeatherRow
+import com.swc.parsedweatherviewerkotlin.utils.CommonUtils
+import com.swc.parsedweatherviewerkotlin.utils.Constants
+import com.swc.parsedweatherviewerkotlin.utils.LoggingUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(){

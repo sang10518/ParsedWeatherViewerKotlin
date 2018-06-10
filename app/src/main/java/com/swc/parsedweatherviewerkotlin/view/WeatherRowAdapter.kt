@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.swc.parsedweatherviewerkotlin.R
 import com.swc.parsedweatherviewerkotlin.model.WeatherRow
+import com.swc.parsedweatherviewerkotlin.utils.LoggingUtils
+import kotlinx.android.synthetic.main.row_weather.view.*
+import kotlinx.android.synthetic.main.row_weather_header.view.*
 
 class WeatherRowAdapter(private val mWeatherRows: List<WeatherRow>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
@@ -56,9 +59,9 @@ class WeatherRowAdapter(private val mWeatherRows: List<WeatherRow>) : RecyclerVi
         internal var wvPmWeather: WeatherView
 
         init {
-            tvRegion = itemView.findViewById(R.id.tvRegion)
-            wvAmWeather = itemView.findViewById(R.id.wvAmWeather)
-            wvPmWeather = itemView.findViewById(R.id.wvPmWeather)
+            tvRegion = itemView.tvRegion
+            wvAmWeather = itemView.wvAmWeather
+            wvPmWeather = itemView.wvPmWeather
         }
     }
 
@@ -70,9 +73,9 @@ class WeatherRowAdapter(private val mWeatherRows: List<WeatherRow>) : RecyclerVi
 
         init {
             itemView.setBackgroundColor(Color.LTGRAY)
-            tvRegionTitle = itemView.findViewById(R.id.tvRegionTitle)
-            tvAmWeatherTitle = itemView.findViewById(R.id.tvAmWeatherTitle)
-            tvPmWeatherTitle = itemView.findViewById(R.id.tvPmWeatherTitle)
+            tvRegionTitle = itemView.tvRegionTitle
+            tvAmWeatherTitle = itemView.tvAmWeatherTitle
+            tvPmWeatherTitle = itemView.tvPmWeatherTitle
         }
     }
 

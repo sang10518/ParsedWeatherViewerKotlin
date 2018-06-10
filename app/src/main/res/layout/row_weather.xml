@@ -2,9 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:paddingLeft="12dp"
-    android:paddingRight="12dp"
-    android:paddingTop="6dp"
-    android:paddingBottom="6dp"
     android:background="@drawable/table_border"
     android:layout_height="wrap_content">
 
@@ -15,24 +12,35 @@
             android:layout_gravity="center"
             android:text="Region"
             android:textAppearance="?attr/textAppearanceListItem" />
-
+        <View
+            android:layout_marginLeft="4dp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#000000" />
         <com.swc.parsedweatherviewerkotlin.view.WeatherView
             android:layout_weight="0.45"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
             android:id="@+id/wvAmWeather"
             android:layout_height="wrap_content"
             android:visibility="visible"
             android:orientation="horizontal"
-            android:gravity="center"
+            android:gravity="start"
             android:layout_width="0dp">
         </com.swc.parsedweatherviewerkotlin.view.WeatherView>
-
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#000000" />
         <com.swc.parsedweatherviewerkotlin.view.WeatherView
             android:layout_weight="0.45"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
             android:id="@+id/wvPmWeather"
             android:layout_height="wrap_content"
             android:visibility="visible"
             android:orientation="horizontal"
-            android:gravity="center"
+            android:gravity="start"
             android:layout_width="0dp">
         </com.swc.parsedweatherviewerkotlin.view.WeatherView>
 </LinearLayout>
