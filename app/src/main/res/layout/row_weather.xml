@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:paddingLeft="12dp"
-    android:paddingRight="12dp"
     android:background="@drawable/table_border"
     android:layout_height="wrap_content">
 
@@ -26,7 +25,7 @@
             android:layout_height="wrap_content"
             android:visibility="visible"
             android:orientation="horizontal"
-            android:gravity="center"
+            android:gravity="start"
             android:layout_width="0dp">
         </com.swc.parsedweatherviewerkotlin.view.WeatherView>
         <View
@@ -41,7 +40,7 @@
             android:layout_height="wrap_content"
             android:visibility="visible"
             android:orientation="horizontal"
-            android:gravity="center"
+            android:gravity="start"
             android:layout_width="0dp">
         </com.swc.parsedweatherviewerkotlin.view.WeatherView>
 </LinearLayout>

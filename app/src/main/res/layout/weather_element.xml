@@ -8,10 +8,12 @@
         <ImageView
             android:layout_gravity="center_vertical"
             android:id="@+id/ivWeather"
-            android:layout_height="40dp"
-            android:layout_width="40dp">
+            android:layout_height="48dp"
+            android:layout_width="48dp">
         </ImageView>
         <LinearLayout
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="6dp"
             android:layout_width="wrap_content"
@@ -21,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:textSize="16sp"
-                android:text="구름조금"
+                android:text="흐리고 가끔 비"
                 android:layout_width="wrap_content">
             </TextView>
             <LinearLayout
