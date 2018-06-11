@@ -3,4 +3,11 @@
     <string name="today_am">오늘오전</string>
     <string name="today_pm">오늘오후</string>
     <string name="region_title">지역</string>
+    <string name="rain_chance_title">강수확률</string>
+    <string name="temp_title">기온</string>
+    <string name="temp_sample">18℃</string>
+    <string name="rain_chance_sample">10%</string>
+    <string name="summary_sample">흐리고 가끔 비</string>
+    <string name="weather_icon_desc">Icon</string>
+    <string name="network_error_msg">Weather unavailable.\nPlease retry network connection.</string>
 </resources>
