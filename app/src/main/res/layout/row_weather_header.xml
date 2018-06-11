@@ -3,7 +3,8 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:paddingLeft="12dp"
     android:background="@drawable/table_border"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingStart="12dp">
 
         <TextView android:id="@+id/tvRegionTitle"
             android:layout_weight="0.1"
@@ -17,7 +18,8 @@
             android:layout_marginLeft="4dp"
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="#000000" />
+            android:background="#000000"
+            android:layout_marginStart="4dp" />
         <TextView android:id="@+id/tvAmWeatherTitle"
             android:paddingTop="6dp"
             android:paddingBottom="6dp"
