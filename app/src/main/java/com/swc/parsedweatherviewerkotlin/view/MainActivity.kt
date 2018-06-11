@@ -1,5 +1,7 @@
 package com.swc.parsedweatherviewerkotlin.view
 
+import android.graphics.Color
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -21,22 +23,38 @@ class MainActivity : AppCompatActivity(){
 
 
     private fun initViews() {
-        rvWeatherTable.setLayoutManager(LinearLayoutManager(this@MainActivity))
+        rvWeatherTable.layoutManager = LinearLayoutManager(this)
         rvWeatherTable.setHasFixedSize(true)
+
+        pbLoading.indeterminateDrawable.setColorFilter(Color.BLUE, PorterDuff.Mode.MULTIPLY)
     }
 
     private fun startFetchWeather() {
         //Todo: improve loading state UX
+
+        pbLoading.visibility = View.VISIBLE
+
         Thread(Runnable {
             LoggingUtils.e(TAG, "startFetchWeather")
             val result = CommonUtils.getTodayWeatherTable(WEATHER_URL, WEATHER_DOCUMENT_QUERY)
             LoggingUtils.e(TAG, "finishFetchWeather, result: $result")
 
-            setWeatherView(result)
+            if (result != null) {
+                setWeatherView(result)
+            } else {
+                setNetworkErrorView()
+            }
         }).start()
     }
 
+    private fun setNetworkErrorView() {
+        pbLoading.visibility = View.GONE
+        rvWeatherTable.visibility = View.GONE
+        llNetworkError.visibility = View.VISIBLE
+    }
+
     private fun setWeatherView(result: List<WeatherRow>) {
+
         for (weatherRow in result) {
             LoggingUtils.e(TAG, "region : " + weatherRow.region + " AM, rain:" + weatherRow.amWeather.rainChance + ", temp: " + weatherRow.amWeather.temp + ", summary: " + weatherRow.amWeather.summary)
             LoggingUtils.e(TAG, "region : " + weatherRow.region + " PM, rain:" + weatherRow.pmWeather.rainChance + ", temp: " + weatherRow.pmWeather.temp + ", summary: " + weatherRow.pmWeather.summary)
@@ -45,6 +63,9 @@ class MainActivity : AppCompatActivity(){
         runOnUiThread {
             val adapter = WeatherRowAdapter(result)
             rvWeatherTable.setAdapter(adapter)
+
+            pbLoading.visibility = View.GONE
+            llNetworkError.visibility = View.GONE
             rvWeatherTable.visibility = View.VISIBLE
         }
 
