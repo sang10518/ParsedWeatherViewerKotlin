@@ -21,7 +21,7 @@ object CommonUtils {
      * @param query
      * @return
      */
-    fun getTodayWeatherTable(url: String, query: String): List<WeatherRow> {
+    fun getTodayWeatherTable(url: String, query: String): List<WeatherRow>? {
 
         val weatherTable = ArrayList<WeatherRow>()
         try {
@@ -47,6 +47,7 @@ object CommonUtils {
             }
         } catch (e: IOException) {
             LoggingUtils.e(TAG, "IOException")
+            return null
         } catch (e: Exception) {
             LoggingUtils.e(TAG, "Exception")
         }
