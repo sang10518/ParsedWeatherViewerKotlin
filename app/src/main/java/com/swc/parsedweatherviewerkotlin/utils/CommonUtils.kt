@@ -4,6 +4,7 @@ import com.swc.parsedweatherviewerkotlin.model.WeatherElement
 import com.swc.parsedweatherviewerkotlin.model.WeatherRow
 import org.jsoup.Jsoup
 import java.io.IOException
+import java.lang.Exception
 import java.util.ArrayList
 
 /**
@@ -20,7 +21,7 @@ object CommonUtils {
      * @param query
      * @return
      */
-    fun getTodayWeatherTable(url: String, query: String): List<WeatherRow> {
+    fun getTodayWeatherTable(url: String, query: String): List<WeatherRow>? {
 
         val weatherTable = ArrayList<WeatherRow>()
         try {
@@ -45,7 +46,10 @@ object CommonUtils {
                 }
             }
         } catch (e: IOException) {
-
+            LoggingUtils.e(TAG, "IOException")
+            return null
+        } catch (e: Exception) {
+            LoggingUtils.e(TAG, "Exception")
         }
 
         return weatherTable

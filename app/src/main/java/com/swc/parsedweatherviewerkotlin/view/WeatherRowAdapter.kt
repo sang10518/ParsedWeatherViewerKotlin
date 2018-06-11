@@ -1,6 +1,5 @@
 package com.swc.parsedweatherviewerkotlin.view
 
-import android.graphics.Color
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -66,13 +65,12 @@ class WeatherRowAdapter(private val mWeatherRows: List<WeatherRow>) : RecyclerVi
     }
 
     inner class WeatherHeaderViewHolder internal constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         internal var tvRegionTitle: TextView
         internal var tvAmWeatherTitle: TextView
         internal var tvPmWeatherTitle: TextView
 
         init {
-            itemView.setBackgroundColor(Color.LTGRAY)
+            itemView.setBackgroundColor(itemView.context.resources.getColor(R.color.colorHeader))
             tvRegionTitle = itemView.tvRegionTitle
             tvAmWeatherTitle = itemView.tvAmWeatherTitle
             tvPmWeatherTitle = itemView.tvPmWeatherTitle

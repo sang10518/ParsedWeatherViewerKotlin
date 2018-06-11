@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".view.MainActivity">
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvWeatherTable"
         android:background="#ffffffff"
         android:scrollbars="vertical"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+    <LinearLayout
+        android:id="@+id/llNetworkError"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/ic_message_alert_black_48dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+        <TextView
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.3"
+            android:text="@string/network_error_msg"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
 
+        </TextView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        style="@style/GenericProgressIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible" />
 </LinearLayout>

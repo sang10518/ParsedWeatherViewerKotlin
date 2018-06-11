@@ -16,7 +16,7 @@
             android:layout_marginLeft="4dp"
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="#000000" />
+            android:background="@color/colorBorder" />
         <com.swc.parsedweatherviewerkotlin.view.WeatherView
             android:layout_weight="0.45"
             android:paddingTop="6dp"
@@ -31,7 +31,7 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="#000000" />
+            android:background="@color/colorBorder" />
         <com.swc.parsedweatherviewerkotlin.view.WeatherView
             android:layout_weight="0.45"
             android:paddingTop="6dp"
