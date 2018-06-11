@@ -3,6 +3,7 @@ package com.swc.parsedweatherviewerkotlin.view
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
 import com.swc.parsedweatherviewerkotlin.R
 import com.swc.parsedweatherviewerkotlin.model.WeatherRow
 import com.swc.parsedweatherviewerkotlin.utils.*
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity(){
         runOnUiThread {
             val adapter = WeatherRowAdapter(result)
             rvWeatherTable.setAdapter(adapter)
+            rvWeatherTable.visibility = View.VISIBLE
         }
 
     }
