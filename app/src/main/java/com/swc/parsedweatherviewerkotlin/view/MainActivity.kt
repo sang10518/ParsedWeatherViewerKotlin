@@ -5,9 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.swc.parsedweatherviewerkotlin.R
 import com.swc.parsedweatherviewerkotlin.model.WeatherRow
-import com.swc.parsedweatherviewerkotlin.utils.CommonUtils
-import com.swc.parsedweatherviewerkotlin.utils.Constants
-import com.swc.parsedweatherviewerkotlin.utils.LoggingUtils
+import com.swc.parsedweatherviewerkotlin.utils.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(){
@@ -30,7 +28,7 @@ class MainActivity : AppCompatActivity(){
         //Todo: improve loading state UX
         Thread(Runnable {
             LoggingUtils.e(TAG, "startFetchWeather")
-            val result = CommonUtils.getTodayWeatherTable(Constants.WEATHER_URL, Constants.WEATHER_DOCUMENT_QUERY)
+            val result = CommonUtils.getTodayWeatherTable(WEATHER_URL, WEATHER_DOCUMENT_QUERY)
             LoggingUtils.e(TAG, "finishFetchWeather, result: $result")
 
             setWeatherView(result)
