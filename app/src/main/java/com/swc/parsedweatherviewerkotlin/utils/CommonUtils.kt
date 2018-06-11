@@ -4,6 +4,7 @@ import com.swc.parsedweatherviewerkotlin.model.WeatherElement
 import com.swc.parsedweatherviewerkotlin.model.WeatherRow
 import org.jsoup.Jsoup
 import java.io.IOException
+import java.lang.Exception
 import java.util.ArrayList
 
 /**
@@ -45,7 +46,9 @@ object CommonUtils {
                 }
             }
         } catch (e: IOException) {
-
+            LoggingUtils.e(TAG, "IOException")
+        } catch (e: Exception) {
+            LoggingUtils.e(TAG, "Exception")
         }
 
         return weatherTable
