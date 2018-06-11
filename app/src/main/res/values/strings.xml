@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Parsed Weather Viewer (Kotlin)</string>
+    <string name="app_name">지역별 날씨</string>
     <string name="today_am">오늘오전</string>
     <string name="today_pm">오늘오후</string>
     <string name="region_title">지역</string>
