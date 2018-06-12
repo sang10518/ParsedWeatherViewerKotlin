@@ -13,8 +13,7 @@ import kotlinx.android.synthetic.main.weather_element.view.*
 class WeatherView : LinearLayout {
     private var weatherElem: WeatherElement? = null
 
-    constructor(context: Context) : super(context) {
-    }
+    constructor(context: Context) : super(context)
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         initViews(context)

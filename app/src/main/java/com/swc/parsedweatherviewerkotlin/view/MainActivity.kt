@@ -35,9 +35,7 @@ class MainActivity : AppCompatActivity(){
         pbLoading.visibility = View.VISIBLE
 
         Thread(Runnable {
-            LoggingUtils.e(TAG, "startFetchWeather")
             val result = CommonUtils.getTodayWeatherTable(WEATHER_URL, WEATHER_DOCUMENT_QUERY)
-            LoggingUtils.e(TAG, "finishFetchWeather, result: $result")
 
             if (result != null) {
                 setWeatherView(result)
@@ -54,12 +52,6 @@ class MainActivity : AppCompatActivity(){
     }
 
     private fun setWeatherView(result: List<WeatherRow>) {
-
-        for (weatherRow in result) {
-            LoggingUtils.e(TAG, "region : " + weatherRow.region + " AM, rain:" + weatherRow.amWeather.rainChance + ", temp: " + weatherRow.amWeather.temp + ", summary: " + weatherRow.amWeather.summary)
-            LoggingUtils.e(TAG, "region : " + weatherRow.region + " PM, rain:" + weatherRow.pmWeather.rainChance + ", temp: " + weatherRow.pmWeather.temp + ", summary: " + weatherRow.pmWeather.summary)
-        }
-
         runOnUiThread {
             val adapter = WeatherRowAdapter(result)
             rvWeatherTable.adapter = adapter
@@ -68,6 +60,5 @@ class MainActivity : AppCompatActivity(){
             llNetworkError.visibility = View.GONE
             rvWeatherTable.visibility = View.VISIBLE
         }
-
     }
 }
