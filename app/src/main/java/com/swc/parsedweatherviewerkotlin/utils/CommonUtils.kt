@@ -30,8 +30,8 @@ object CommonUtils {
 
             for (row in table.select("tr")) {
                 //for each row. get region, morning, afternoon table elements
-                var amWeather: WeatherElement? = null
-                var pmWeather: WeatherElement? = null
+                var amWeather: WeatherElement?
+                var pmWeather: WeatherElement?
                 val region = row.select("th").first()
 
                 val icons = row.getElementsByClass("icon")
