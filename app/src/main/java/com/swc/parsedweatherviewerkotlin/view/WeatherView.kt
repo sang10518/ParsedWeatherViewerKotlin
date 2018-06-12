@@ -1,8 +1,6 @@
 package com.swc.parsedweatherviewerkotlin.view
 
-import android.annotation.TargetApi
 import android.content.Context
-import android.os.Build
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
@@ -16,23 +14,14 @@ class WeatherView : LinearLayout {
     private var weatherElem: WeatherElement? = null
 
     constructor(context: Context) : super(context) {
-        LoggingUtils.e(TAG, "weatherview init 1")
     }
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
-        LoggingUtils.e(TAG, "weatherview init 2")
         initViews(context)
     }
 
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
         initViews(context)
-        LoggingUtils.e(TAG, "weatherview init 3")
-    }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes) {
-        initViews(context)
-        LoggingUtils.e(TAG, "weatherview init 4")
     }
 
     private fun initViews(context: Context) {
