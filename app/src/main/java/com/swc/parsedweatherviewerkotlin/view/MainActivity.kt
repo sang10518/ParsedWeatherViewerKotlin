@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity(){
 
         runOnUiThread {
             val adapter = WeatherRowAdapter(result)
-            rvWeatherTable.setAdapter(adapter)
+            rvWeatherTable.adapter = adapter
 
             pbLoading.visibility = View.GONE
             llNetworkError.visibility = View.GONE

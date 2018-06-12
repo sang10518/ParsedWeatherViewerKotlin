@@ -32,7 +32,7 @@ class WeatherRowAdapter(private val mWeatherRows: List<WeatherRow>) : RecyclerVi
 
             val region = `object`.region
             LoggingUtils.e(TAG, "region at position $position: $region")
-            (holder as WeatherViewHolder).tvRegion.setText(region)
+            (holder as WeatherViewHolder).tvRegion.text = region
             holder.wvAmWeather.setWeatherElem(`object`.amWeather)
             holder.wvPmWeather.setWeatherElem(`object`.pmWeather)
         }
