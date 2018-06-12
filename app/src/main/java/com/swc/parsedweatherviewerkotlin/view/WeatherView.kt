@@ -43,9 +43,9 @@ class WeatherView : LinearLayout {
 
     fun setWeatherElem(weatherElem: WeatherElement) {
         this.weatherElem = weatherElem
-        tvSummary.setText(weatherElem.summary)
-        tvTemp.setText(weatherElem.temp)
-        tvRain.setText(weatherElem.rainChance)
+        tvSummary.text = weatherElem.summary
+        tvTemp.text = weatherElem.temp
+        tvRain.text = weatherElem.rainChance
 
         Picasso.get()
                 .load(weatherElem.iconUrl)
