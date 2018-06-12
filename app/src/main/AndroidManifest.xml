@@ -6,7 +6,6 @@
         android:allowBackup="true"
         android:icon="@mipmap/weather_partlycloudy_black"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/weather_partlycloudy_black"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".view.MainActivity"
